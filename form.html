@@ -1,0 +1,179 @@
+<!-- 
+<?php
+
+$conn = mysqli_connect('localhost','root','','kaggledays');
+
+if(!$conn){
+    echo "Not connected";
+}
+if(isset($_POST['submit'])){
+$username = $_POST['username'];
+$emailid = $_POST['emailid'];
+$contactnumber = $_POST['contactnumber'];
+$linkedinprofile = $_POST['linkedinprofile'];
+$kaggleprofile = $_POST['kaggleprofile'];
+$githubprofile = $_POST['githubprofile'];
+$sessiontitle = $_POST['sessiontitle'];
+$userdescription = $_POST['userdescription'];
+$sessionformat = $_POST['sessionformat'];
+$track = $_POST['track'];
+$userlevel = $_POST['userlevel'];
+$notes = $_POST['notes'];
+$speakertagline = $_POST['speakertagline'];
+$speakerbiography = $_POST['speakerbiography'];
+$speakerphoto = $_POST['speakerphoto'];
+$twitter = $_POST['twitter'];
+$website = $_POST['website'];
+
+$sql = "INSERT INTO users (username,emailid,contactnumber,linkedinprofile,kaggleprofile,githubprofile,sessiontitle,userdescription,
+        sessionformat,track,userlevel,notes,speakertagline,speakerbiography,speakerphoto,twitter,website) VALUES ('$username','$emailid','$contactnumber',
+        '$linkedinprofile','$kaggleprofile','$githubprofile','$sessiontitle','$userdescription','$sessionformat','$track','$userlevel','$notes','$speakertagline','$speakerbiography',
+        '$speakerphoto','$twitter','$website')";
+
+if(!mysqli_query($conn,$sql)){
+    echo "Not inserted";
+}        
+
+}
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call For Speaker</title>
+</head>
+<script>
+    function validateform(){
+        var username = document.forms["speakerform"]["username"];
+        var emailid = document.forms["speakerform"]["emailid"];
+        var contactnumber = document.forms["speakerform"]["contactnumber"];
+        var linkedinprofile = document.forms["speakerform"]["linkedinprofile"];
+        var kaggleprofile = document.forms["speakerform"]["kaggleprofile"];
+        var githubprofile = document.forms["speakerform"]["githubprofile"];
+        var sessiontitle = document.forms["speakerform"]["sessiontitle"];
+        var description = document.forms["speakerform"]["userdescription"];
+        var sessonformat = document.forms["speakerform"]["sessionformat"];
+        var track = document.forms["speakerform"]["track"];
+        var level = document.forms["speakerform"]["userlevel"];
+        var notes = document.forms["speakerform"]["notes"];
+        var speakertagline = document.forms["speakerform"]["speakertagline"];
+        var speakerbiography = document.forms["speakerform"]["speakerbiography"];
+        var speakerphoto = document.forms["speakerform"]["speakerphoto"];
+        var twitter = document.forms["speakerform"]["twitter"];
+        var website = document.forms["speakerform"]["website"];
+        
+        if(username == "" || !is_NaN(username) || username.lenght < 2 || username.lenght > 20){
+            document.getElementById('n').innerHTML = "Please enter name";  
+        }
+        if(emailid == "" || emailid.indexOg("@")<=0 || emailid.indexOg(".")){
+            document.getElementById('e').innerHTML = "Please enter email";  
+        }
+        if(contactnumber == "" || !is_NaN(contactnumber) || contactnumber.lenght < 10 || contactnumber.lenght > 10){
+            document.getElementById('cn').innerHTML = "Please enter proper mobile number";
+
+        }
+        if(linkedinprofile == "" || !is_NaN(linkedinprofile)){
+            document.getElementById('lp').innerHTML = "Please enter LinkedInProfile url";
+        }
+        if(kaggleprofile == "" || !is_NaN(kaggleprofile)){
+            document.getElementById('kp').innerHTML = "Please enter KaggleProfile url";
+        }
+        if(githubprofile == "" || !is_NaN(githubprofile)){
+            document.getElementById('gp').innerHTML = "Please enter GithubProfile url";
+        }
+        if(sessiontitle == "" || !is_NaN(sessiontitle)){
+            document.getElementById('sp').innerHTML = "Please enter Session title";
+        }
+        if(description == "" || !is_NaN(description)){
+            document.getElementById('d').innerHTML = "Please enter Description";
+        }
+        if(notes == "" || !is_NaN(notes)){
+            document.getElementById('nt').innerHTML = "Please enter notes";
+        }
+        if(speakertagline == "" || !is_NaN(speakertagline)){
+            document.getElementById('stl').innerHTML = "Please enter tag-line";
+        }
+        if(speakerbiography == "" || !is_NaN(speakerbiography)){
+            document.getElementById('sb').innerHTML = "Please enter your biography";
+        }
+        if(twitter == "" || !is_NaN(twitter)){
+            document.getElementById('t').innerHTML = "Please enter TwitterProfile url";
+        }
+        if(website == "" || !is_NaN(website)){
+            document.getElementById('web').innerHTML = "Please enter Your Website url";
+        }
+        
+
+    }
+</script>
+<body>
+    <div class="form">
+        <form action="form.php" name="speakerform" method="POST">
+            Name<br>
+            <input type="text" placeholder="Your answer" id="name" name="username"><br><br>
+            <span id="n"></span>
+            E-mail id<br>
+            <input type="email" placeholder="Your answer" id="email" name="emailid"><br><br>
+            <span id="e"></span>
+            Contact Number<br>
+            <input type="text" placeholder="Your answer" id="contactnumber" name="contactnumber"><br><br>
+            <span id="cn"></span>
+            LinkedIn Profile<br>
+            <input type="text" placeholder="Your answer" id="linkedinprofile" name="linkedinprofile"><br><br>
+            <span id="lp"></span>
+            Kaggle Profile<br>
+            <input type="text" placeholder="Your answer" id="kaggleprofile" name="kaggleprofile"><br><br>
+            <span id="kp"></span>
+            Github Profile<br>
+            <input type="text" placeholder="Your answer" id="githubprofile" name="githubprofile"><br><br>
+            <span id="gp"></span>
+            Session Title<br>
+            <input type="text" placeholder="Your answer" id="sessiontitle" name="sessiontitle"><br><br>
+            <span id="sp"></span>
+            Description<br>
+            <textarea name="userdescription" id="userdescription" cols="30" rows="10"></textarea><br><br>
+            <span id="d"></span>
+            Session Format<br>
+            <input type="radio" id="sessionformat" name="sessionformat" value="Tech Session">Tech Session<br>
+            <input type="radio" id="sessionformat" name="sessionformat" value="Workshop">Workshop<br><br>
+            Track<br>
+            <input type="radio" id="track" name="track" value="Kaggle Project">Kaggle Project<br>
+            <input type="radio" id="track" name="track" value="Machine Learning">Machine Learning<br>
+            <input type="radio" id="track" name="track" value="Deep Learning">Deep Learning<br>
+            <input type="radio" id="track" name="track" value="NLP">NLP<br><br>
+            Level<br>
+            <input type="radio" id="userlevel" name="userlevel" value="Intoductory and Overview">Intoductory and Overview<br>
+            <input type="radio" id="userlevel" name="userlevel" value="Intermediate">Intermediate<br>
+            <input type="radio" id="userlevel" name="userlevel" value="Advanced">Advanced<br>
+            <input type="radio" id="userlevel" name="userlevel" value="Expert">Expert<br><br>
+            Notes<br>
+            <input type="text" placeholder="Your answer" id="notes" name="notes"><br><br>
+            <span id="nt"></span>
+            Speaker Tag-Line<br>
+            <input type="text" placeholder="Your answer" id="speakertagline" name="speakertagline"><br><br>
+            <span id="stl"></span>
+            Speaker Biography<br>
+            <textarea name="speakerbiography" id="speakerbiography" cols="30" rows="10"></textarea><br><br>
+            <span id="sb"></span>
+            Speaker Photo<br>
+            <input type="file" placeholder="Your answer" id="speakerphoto" name="speakerphoto"><br><br>
+            <span id="sp"></span>
+            Twitter<br>
+            <input type="text" placeholder="Your answer" id="twitter" name="twitter"><br><br>
+            <span id="t"></span>
+            Website<br>
+            <input type="text" placeholder="Your answer" id="website" name="website"><br><br>
+            <span id="web"></span>
+            Agree<br>
+            <input type="checkbox">I agree that personal data shown on this page is shared with the organizer of 
+            Kaggle Days Mumbai.Organizer may share your session and personal data publicly as (but not limited to) a part of a event schedule.<br>
+            <br>
+            <button type="submit" name="submit">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>
