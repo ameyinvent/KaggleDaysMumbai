@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaggle Days Mumbai</title>
+    <link rel="shortcut icon" href="assets/img/fevicon.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .banner {
+        background-image: url(assets/img/banner2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 540px;
+        width: 1330px;
+        margin-top: 0px;
+    }
+    
+    #logo {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    ul li a {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .container img {
+        height: 50px;
+        width: 160px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    
+    .grid-item {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .card {
+        height: 450px;
+    }
+    
+    .card img {
+        width: 100%;
+    }
+    
+    .card a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .logos {
+        margin-left: 150px;
+    }
+    
+    .logos img {
+        border-radius: 50%;
+        /* border:2px solid black; */
+    }
+    
+    .form {
+        width: 300px;
+        height: 400px;
+        margin-left: 500px;
+    }
+    
+    input {
+        border: 2px solid black;
+    }
+    
+    .footer {
+        background: black;
+        color: gray;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .cont {
+        width: 50px;
+        border: 2px solid crimson;
+    }
+    
+    .share-social {
+        margin-left: 460px;
+        color: gray;
+    }
+    
+    .mainsection p {
+        margin-left: 150px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .team {
+        font-size: 40px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .imgg {
+        border: 0px solid black;
+        height: 300px;
+    }
+    
+    .imgg img {
+        margin-left: 500px;
+    }
+    
+    .devleopers {
+        font-size: 30px;
+        font-family: 'Courier New', Courier;
+    }
+    
+    .develop {
+        font-size: 21px;
+    }
+    
+    .imgs img {
+        margin-left: 270px;
+    }
+    
+    #mainNav.black {
+        background: black;
+    }
+    
+    @media screen and (max-width: 670px) {
+        .banner {
+            height: 500px;
+            width: 640px;
+            margin-left: 0px;
+        }
+        .imgs img {
+            margin-left: 10px;
+            width: 600px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+            padding: 10px;
+        }
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+        }
+        .share-social {
+            margin-left: 100px;
+        }
+        .card {
+            height: 450px;
+        }
+    }
+</style>
+
+
+<!-- Body section will be started here -->
+
+<body>
+    <header>
+        <nav class="nav-wrapper transparent fixed-top" id="mainNav">
+            <div class="container" id="home">
+                <a href="#" class="brand-logo" id="logo"><img src="assets/img/logo1.png" alt=""></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                    <i class="material-icons" style="color: black">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About Us</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="form.php">Call for Speaker</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+
+                </ul>
+
+                <!-- nav section for an Mobile view -->
+                <ul class="sidenav gray lighten-2" id="mobile-menu">
+
+                    <li><a href="project.php">Home</a></li>
+                    <li><a href="services.html">About Us</a></li>
+                    <li><a href="contact.html">Events</a></li>
+                    <li><a href="login.php">Call for Speaker</a></li>
+                    <li><a href="login.php">Contact Us</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner will be Started here  -->
+    <div class="banner">
+    </div>
+    <br>
+    <!-- About the Days of an Kaggle will be started here -->
+    <div class="mainsection wow fadeInUp" id="About">
+        <center>
+            <h4>About Kaggle Days</h4>
+            <hr class="cont wow fadeInUp">
+        </center><br><br>
+        <br>
+        <!-- <p>Kaggle Days Meetups are a series of events all over the world that Aim to gether Kagglers and</P> -->
+    </div>
+    <div class="imgs wow fadeInUp">
+        <img src="assets/img/standardimage.PNG"></img>
+
+
+    </div>
+    <br>
+    <div class="wh" id="events">
+        <div class="para wow fadeInUp">
+            <h4>
+                <center>Why Join Kaggle Days Mumbai
+                    <hr class="cont">
+                </center>
+            </h4>
+            <br>
+        </div>
+    </div>
+
+
+    <!-- All the Cards will be started here -->
+    <div class="cards">
+        <div class="grid-container">
+            <div class="grid-item">
+                <!-- card for all the Events will be here -->
+                <div class="card wow fadeInUp">
+                    <div class="img">
+                        <img src="assets/img/events.jpg" alt="" height="200px">
+                    </div>
+                    <div class="title wow fadeInUp">
+                        <h4>Event 1</h4>
+                    </div>
+                    <div class="description wow fadeInUp">
+                        This Event is Aboout an Technical Events about an Kaggle in this event you should.. This Event is Aboout an Technical Events about an Kaggle in this event you should </h1>
+                    </div>
+                    <br><br>
+                    <button class="btn wow fadeInUp"><a href="form2.php">Register</a></button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- Code for secound Cards will' be Stared here -->
+                <div class="card wow fadeInUp">
+                    <div class="img">
+                        <img src="assets/img/cfp.png" alt="" height="200px">
+                    </div>
+                    <div class="title wow fadeInUp">
+                        <h4>Event 2</h4>
+                    </div>
+                    <div class="description wow fadeInUp">
+                        This Event is Aboout an Technical Events about an Kaggle in this event you should This Event is Aboout an Technical Events about an Kaggle in this event you should
+                    </div> <br><br>
+                    <button class="btn"><a href="form2.php">Register</a></button>
+                </div>
+            </div>
+            <div class="grid-item">
+                <!-- Code for Third Cards will' be Stared here -->
+                <div class="card wow fadeInUp">
+                    <div class="img">
+                        <img src="assets/img/sponsor.png" alt="" height="200px">
+                    </div>
+                    <div class="title wow fadeInUp">
+                        <h4>Event 3</h4>
+                    </div>
+                    <div class="description wow fadeInUp">
+                        This Event is Aboout an Technical Events about an Kaggle in this event you should This Event is Aboout an Technical Events about an Kaggle in this event you should
+                    </div> <br><br>
+                    <button class="btn wow fadeInUp"><a href="form2.php">Register</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Sponsers code is Here -->
+    <div class="sponser" id="sample wow fadeInUp">
+        <center>
+            <h4>Our Sponsers & Partners</h4>
+            <hr class="cont wow fadeInUp">
+        </center><br><br>
+        <div class="logos wow fadeInUp">
+            <img src="assets/img/logo1.png" alt="">
+            <img src="assets/img/fevicon.png" alt="">
+            <img src="assets/img/logo1.png" alt="">
+            <img src="assets/img/fevicon.png" alt="">
+        </div>
+    </div>
+
+    <br>
+
+    <!-- contact form  -->
+
+    <div class="contact" id="contact">
+        <center>
+            <h4>Contact Us</h4>
+            <hr class="cont">
+        </center><br>
+    </div>
+    <section class="section container wow fadeInUp" id="contact">
+        <div class="row">
+            <div class="col s12 l5">
+                <h2 class="indigo-text text-darken-4 wow fadeInUp" data-animate-scroll='{"rotation": "180","duration": "2.5","scaleX": "0","scaleY": "0"}'>
+                    Get in touch
+                </h2>
+                <p>If you have any Help related to the site then fell free to ask.. Please fill the form to contact with us. we are here to 24 x 7 help you. Feel free to ask me.
+                    <br><br> <b>Kaggle Days Mumbai</b></p>
+            </div>
+
+            <div class="col s12 l5 offset-l2 wow fadeInUp">
+                <form action="">
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" id="email">
+                        <label for="email">Your Email</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">Name</i>
+                        <input type="email" id="email">
+                        <label for="email">Enter your Name</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea name="" id="message" class="materialize-textarea" cols="30" rows="10"></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+
+                    <div class="input-field center">
+                        <button class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer  will be Stared here -->
+    <div class="footer">
+        <footer>
+            <br><br>
+            <div class="share-social wow fadeInUp ">
+                <span><a style="color:gray"><b>Keep In Touch</b></a></span>
+                <a id="social_button" href="" target="_blank"><i class="fa fa-facebook"></i></a><a>&nbsp;</a>
+                <a id="social_button" href="" target="_blank"><i class="fa fa-twitter"></i></a><a>&nbsp;</a>
+                <a id="social_button" href="" target="_blank"><i class="fa fa-medium"></i></a><a>&nbsp;</a>
+                <a id="social_button" href="" target="_blank"><i class="fa fa-github"></i></a><a>&nbsp;</a>
+
+                <span><a href="" style="color:grey"><b>Email Us : <b>kagglemumbai@gmail.com</b></b></a></span>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item wow fadeInUp">
+                    <a href="" id="details_redirect wow fadeInUp" target="_blank"><b>Kaggle Days Mumbai</b></a><br />
+                    <a href="" id="details_redirect wow fadeInUp" target="_blank" style="color:gray">This is About the Kaggle Mumbai</a><br />
+
+                    <a href="" id="details_redirect wow fadeInUp" style="color:gray">Meet the Team</a><br />
+                    </p>
+                </div>
+
+
+                <div class="grid-item wow fadeInUp">
+                    <span><b>ABOUT Kaggle Mumbai</b></span>
+                    <p>
+                        <a href="" id="details_redirect wow fadeInUp" target="_blank"><b>Kaggle Mumbai</b></a><br />
+                        <a href="" id="details_redirect wow fadeInUp" target="_blank" style="color:rgb(66, 66, 66);">Kaggle Mumbai</a><br />
+                    </p>
+                </div>
+                <div class="grid-item wow fadeInUp">
+                    <span><b>OTHER LINKS</b></span>
+                    <p>
+                        <a href="#" id="details_redirect wow fadeInUp" target="_blank" style="color:rgb(65, 64, 64);">Call for Speakers</a><br />
+                        <a href="#" id="details_redirect wow fadeInUp" target="_blank" style="color:rgb(65, 64, 64);">Call for Sponsors</a><br />
+                        <a href="#" id="details_redirect wow fadeInUp" target="_blank"><b>Community Guidelines</b></a><br />
+                    </p>
+                </div>
+
+            </div>
+            <div>
+
+        </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                $('.sidenav').sidenav();
+                $('.materialboxed').materialbox();
+                $('.parallax').parallax();
+                $('.tabs').tabs();
+                $('.datepicker').datepicker();
+
+            });
+        </script>
+
+
+
+
+</body>
+
+</html>
