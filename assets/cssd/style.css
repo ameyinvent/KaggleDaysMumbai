@@ -1,0 +1,114 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.banner {
+    background-image: url(assets/img/banner1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 540px;
+    width: 1330px;
+    margin-top: 0px;
+}
+
+#logo {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul li a {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container img {
+    height: 50px;
+    width: 160px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    height: 450px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.logos {
+    margin-left: 150px;
+}
+
+.logos img {
+    border-radius: 50%;
+    /* border:2px solid black; */
+}
+
+.form {
+    width: 300px;
+    height: 400px;
+    margin-left: 500px;
+}
+
+input {
+    border: 2px solid black;
+}
+
+.footer {
+    background: black;
+    color: gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cont {
+    width: 50px;
+    border: 2px solid crimson;
+}
+
+.share-social {
+    margin-left: 460px;
+    color: gray;
+}
+
+.mainsection p {
+    margin-left: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.team {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        width: 600px;
+        margin-left: 10px;
+        height: 100px;
+    }
+    .share-social {
+        margin-left: 70px;
+    }
+    .imgs img {
+        width: 560px;
+        margin-left: 40px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+    }
+    .grid-item {
+        padding: 20px;
+        text-align: center;
+    }
+}
